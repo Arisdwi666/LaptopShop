@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./Images/logotop.png" type="image/png" />
+        <link type="text/css" href="CSS/main.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous"
+        />
+        <title>Laptop Shop</title>
+    </head>
+
+    <body>
+        <!--Navbar-->
+        <nav>
+            <!--Navbar has two part the top one and the bottom one-->
+            <!--Here is top one and in this part I put logo, my account part, and the shopping cart-->
+            <div class="navbar-top">
+                <div>
+                    <button id="menuButton"><i class="fas fa-bars"></i></button>
+                    <!--Logo-->
+                    <a href="index.html">
+                        <h2 class="logo">LaptopShop</h2>
+                    </a>
+                </div>
+                <div>
+                    <!--My account part-->
+                    <div class="account">
+                        <a href="index.html">
+                            <button class="account-btn">
+                                <i class="fas fa-user-alt"></i>
+                            </button>
+                            <span class="account-text">My account</span>
+                        </a>
+                        <!--When we click the btnShowAccountInfo this section will be displayed-->
+                    </div>
+                    <!--Shopping cart-->
+                    <div class="shopping-cart">
+                        <div class="sum-prices">
+                            <!--Shopping cart logo-->
+                            <i
+                                class="fas fa-shopping-cart shoppingCartButton"
+                            ></i>
+                            <!--The total prices of products in the shopping cart -->
+                            <h6 id="sum-prices"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Navbar bottom part -->
+            <!-- Here I put the links to the other pages or nav links -->
+            <div class="navbar" id="navbar">
+                <div class="links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#product">Shop</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <!-- The searchbar which will be in the right side of the links -->
+                <div class="searchbar">
+                    <form action="#">
+                        <input type="search" placeholder="search" />
+                        <i class="fa fa-search" id="search-icon"></i>
+                    </form>
+                </div>
+            </div>
+            <div class="producstOnCart hide">
+                <div class="overlay"></div>
+                <div class="top">
+                    <button id="closeButton">
+                        <i class="fas fa-times-circle"></i>
+                    </button>
+                    <h3>Cart</h3>
+                </div>
+                <ul id="buyItems">
+                    <h4 class="empty">Your shopping cart is empty</h4>
+                    <!-- <li class="buyItem">
+						<img src="Images/ASUS_ROG_Strix_G15.png">
+						<div>
+							<h5>Products Name</h5>
+							<h6>Rp.29.999.000</h6>
+							<div>
+								<button>-</button>
+								<span class="countOfProduct">1</span>
+								<button>+</button>
+							</div>
+						</div>
+					</li> -->
+                </ul>
+                <button class="btn checkout hidden">Check out</button>
+            </div>
+        </nav>
+        
+        <header>
+            <!-- Home -->
+        <section class="home" id="home">
+            <div class="home-text">
+                <h1><Span>Make</Span>Your Comfort <br> Is Our <span>Happiness</span></h1>
+                <p>Welcome to my laptop shop website,sorry if it's not completed. <br> I hope you can shop comfortably and quiet, Happy Shopping.</p>
+                <a href="product" class="btn">Shop Now</a>
+            </div>
+        </section>
+        </header>
+        <main>
+            <section class="main-section" id="product">
+                <div class="product-container">
+                    <h3>Popular Products</h3>
+                    <div class="products">
+                        <div class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="Images/ASUS_ROG_Strix_G15.png"
+                                        alt="popular labtops and computers"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="1"
+                                        >
+                                            <i class="fas fa-cart-plus"></i>Add
+                                            to cart
+                                        </button>
+                                        <a
+                                            href="detail_page.html"
+                                            class="btn btn-small"
+                                            >More Info</a
+                                        >
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">ASUS ROG Strix G15 </h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                        Asus ROG STRIX G15 Ryzen 7 4800 8GB 512ssd GTX1650 4GB..
+                                    </p>
+                                    <h6 class="price">
+                                        Rp.<span class="priceValue">29999000</span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="Images/lenovo_yoga_9i.png"
+                                        alt="popular labtops and computers"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="2"
+                                        >
+                                            <i class="fas fa-cart-plus"></i>Add
+                                            to cart
+                                        </button>
+                                        <a
+                                            href="detail_page.html"
+                                            class="btn btn-small"
+                                            >More Info</a
+                                        >
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">Lenovo Yoga 9i</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                        LENOVO YOGA 9 14 2IN1 TOUCH i7 1185G7 8GB 512SSD W10 14.0FHD
+                                    </p>
+                                    <h6 class="price">
+                                        Rp.<span class="priceValue">15699000</span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="Images/macbook_pro_14.png"
+                                        alt="popular labtops and computers"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="3"
+                                        >
+                                            <i class="fas fa-cart-plus"></i>Add
+                                            to cart
+                                        </button>
+                                        <a
+                                            href="detail_page.html"
+                                            class="btn btn-small"
+                                            >More Info</a
+                                        >
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">Apple Macbook Pro 14 inch M1 Pro 2021</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                        Macbook Pro 14" M1 Pro 2021 8-core CPU 14-core GPU 16GB...
+                                    </p>
+                                    <h6 class="price">
+                                        Rp.<span class="priceValue">34800000</span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="Images/Lenovo_ThinkPad_X1_Nano.png"
+                                        alt="popular labtops and computers"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="4"
+                                        >
+                                            <i class="fas fa-cart-plus"></i>Add
+                                            to cart
+                                        </button>
+                                        <a
+                                            href="detail_page.html"
+                                            class="btn btn-small"
+                                            >More Info</a
+                                        >
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">LENOVO THINKPAD X1 NANO</h4>
+                                    <span class="stars"></span>
+                                    <p>
+                                        LENOVO THINKPAD X1 NANO GEN1-7EID i7-1180G7 16GB 1TB 13,5" TOUCH...
+                                    </p>
+                                    <h6 class="price">
+                                        Rp.<span class="priceValue">35499000</span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section">
+                <div class="pop-laptops">
+                    <div class="pop-laptops-1">
+                        <figure>
+                            <img
+                                src="Images/new_macbook_pro.png"
+                            />
+                        </figure>
+                        <div>
+                            <h2>New MacBook M1 pro</h2>
+                            <p>
+                                MacBook Pro 16 inci (RAM 32GB, SSD 1TB, 32-Core GPU, Apple M1 Max Chip)
+                            </p>
+                            <h4>Rp. 55.499.000</h4>
+                            <a href="#" class="btn"
+                                >Buy now<i class="fas fa-angle-right"></i
+                            ></a>
+                        </div>
+                    </div>
+                    <h3>More Products</h3>
+                    <div class="pop-laptops-2">
+                        <ul class="products">
+                            <li class="product">
+                                <div class="product-under">
+                                    <figure class="product-image">
+                                        <img
+                                            src="Images/msi_katana_gf66.png"
+                                            alt="popular laptops"
+                                        />
+                                        <div class="product-over">
+                                            <button
+                                                class="btn btn-small addToCart"
+                                                data-product-id="5"
+                                            >
+                                                <i class="fas fa-cart-plus"></i
+                                                >Add to cart
+                                            </button>
+                                            <a
+                                                href="#"
+                                                class="btn btn-small"
+                                                >More Info</a
+                                            >
+                                        </div>
+                                    </figure>
+                                    <div class="product-summary">
+                                        <h4 class="productName">MSI Katana GF66</h4>
+                                        <span class="stars"></span>
+                                        <h4 class="price">
+                                            Rp.<span class="priceValue"
+                                                >16899000</span
+                                            >
+                                        </h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="product-under">
+                                    <figure class="product-image">
+                                        <img
+                                            src="Images/ASUS TUF FX516PC.png"
+                                            alt="popular laptops"
+                                        />
+                                        <div class="product-over">
+                                            <button
+                                                class="btn btn-small addToCart"
+                                                data-product-id="6"
+                                            >
+                                                <i class="fas fa-cart-plus"></i
+                                                >Add to cart
+                                            </button>
+                                            <a
+                                                href="#"
+                                                class="btn btn-small"
+                                                >More Info</a
+                                            >
+                                        </div>
+                                    </figure>
+                                    <div class="product-summary">
+                                        <h4 class="productName">ASUS TUF FX516PC</h4>
+                                        <span class="stars"></span>
+                                        <h4 class="price">
+                                            Rp.<span class="priceValue">16249000</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="product-under">
+                                    <figure class="product-image">
+                                        <img
+                                            src="Images/legion_5.png"
+                                            alt="popular laptops"
+                                        />
+                                        <div class="product-over">
+                                            <button
+                                                class="btn btn-small addToCart"
+                                                data-product-id="7"
+                                            >
+                                                <i class="fas fa-cart-plus"></i
+                                                >Add to cart
+                                            </button>
+                                            <a
+                                                href="#"
+                                                class="btn btn-small"
+                                                >More Info</a
+                                            >
+                                        </div>
+                                    </figure>
+                                    <div class="product-summary">
+                                        <h4 class="productName">Lenovo Legion 5 </h4>
+                                        <span class="stars"></span>
+                                        <h4 class="price">
+                                            Rp.<span class="priceValue">18299000</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="product-under">
+                                    <figure class="product-image">
+                                        <img
+                                            src="Images/huawei_matebook_14s.png"
+                                            alt="popular laptops"
+                                        />
+                                        <div class="product-over">
+                                            <button
+                                                class="btn btn-small addToCart"
+                                                data-product-id="8"
+                                            >
+                                                <i class="fas fa-cart-plus"></i
+                                                >Add to cart
+                                            </button>
+                                            <a
+                                                href="#"
+                                                class="btn btn-small"
+                                                >More Info</a
+                                            >
+                                        </div>
+                                    </figure>
+                                    <div class="product-summary">
+                                        <h4 class="productName">Huawei Matebook 14S</h4>
+                                        <span class="stars"></span>
+                                        <h4 class="price">
+                                            Rp.<span class="priceValue">16539000</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="product-under">
+                                    <figure class="product-image">
+                                        <img
+                                            src="Images/asus_a416jp.png"
+                                            alt="popular laptops"
+                                        />
+                                        <div class="product-over">
+                                            <button
+                                                class="btn btn-small addToCart"
+                                                data-product-id="9"
+                                            >
+                                                <i class="fas fa-cart-plus"></i
+                                                >Add to cart
+                                            </button>
+                                            <a
+                                                href="#"
+                                                class="btn btn-small"
+                                                >More Info</a
+                                            >
+                                        </div>
+                                    </figure>
+                                    <div class="product-summary">
+                                        <h4 class="productName">ASUS A416JP</h4>
+                                        <span class="stars"></span>
+                                        <h4 class="price">
+                                            Rp.<span class="priceValue">10699000</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="product-under">
+                                    <figure class="product-image">
+                                        <img
+                                            src="Images/acer_nitro_5.png"
+                                            alt="popular laptops"
+                                        />
+                                        <div class="product-over">
+                                            <button
+                                                class="btn btn-small addToCart"
+                                                data-product-id="10"
+                                            >
+                                                <i class="fas fa-cart-plus"></i
+                                                >Add to cart
+                                            </button>
+                                            <a
+                                                href="detail_page.html"
+                                                class="btn btn-small"
+                                                >More Info</a
+                                            >
+                                        </div>
+                                    </figure>
+                                    <div class="product-summary">
+                                        <h4 class="productName">ACER NITRO 5</h4>
+                                        <span class="stars"></span>
+                                        <h4 class="price">
+                                            Rp.<span class="priceValue">12999000</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- About -->
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="Images/logo.png" alt="">
+            </div>
+            <div class="about-text">
+                <span>About Us</span>
+                <h2>Laptop is an important part <br>to work and study</h2>
+                <p>LaptopShop adalah toko online yang menyediakan laptop-laptop yang sedang populer atau paling dicari oleh semua kalangan.</p>
+                <p>Kalian bisa melihat-lihat terlebih dahulu product-product yang kita tawarkan diatas,jika anda minat silahkan hubungi kami.</p>
+                <a href="#product" class="btn">Learn More.</a>
+            </div>
+        </section>
+        <footer id="footer" class="section footer">
+            <div class="footer-second">
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <div>
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                        Jabung,Jatiroto,Kayen,Kab.Pati,Jawa Tengah 59171
+                      </div>
+                      <div>
+                        <span>
+                            <i class="fas fa-phone-alt"></i>
+                        </span>
+                        087737965091
+                      </div>
+                      <div>
+                        <span>
+                            <i class="far fa-envelope"></i>
+                        </span>
+                        aristakiya000@gmail.com
+                      </div>
+                      <div>
+                        <span>
+                            <i class="fab fa-facebook"></i>
+                        </span>
+                        Aris Dwi
+                      </div>
+                      <div>
+                        <span>
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                        _arisdwi66
+                      </div>
+                      <div>
+                        <span>
+                            <i class="fab fa-whatsapp"></i>
+                        </span>
+                        087737965091
+                      </div>
+                </div>
+            </div>
+            <ul class="footer-last">
+                <li>
+                    <p><i class="fab fa-cc-mastercard"></i></p>
+                </li>
+                <li>
+                    <p><i class="fab fa-cc-paypal"></i></p>
+                </li>
+                <li>
+                    <p><i class="fab fa-cc-visa"></i></p>
+                </li>
+                <li>
+                    <p><i class="fab fa-cc-amex"></i></p>
+                </li>
+            </ul>
+        </footer>
+        <div class="copyright">
+            <p> @Aris Dwi Wahyudi-13070 2022 All Right Reserved.</p>
+        </div>
+        <script src="JS/script.js"></script>
+        <script src="shopping-cart.js"></script>
+    </body>
+</html>
